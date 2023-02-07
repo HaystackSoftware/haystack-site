@@ -1,0 +1,506 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: noto;
+    src: url(../../public/static/fonts/noto.ttf);
+ }
+
+ @font-face {
+    font-family: solitreo;
+    src: url(../../public/static/fonts/Solitreo.ttf);
+ }
+
+@layer base {
+    html {
+      font-family: noto, system-ui, sans-serif;
+      color: darkgray;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font-family: solitreo;
+    font-size: 3rem;
+    color: #00798C;
+}
+
+// Hero section
+
+.hero {
+    background: rgb(0,61,91);
+    background: linear-gradient(180deg, rgba(0,61,91,1) 0%, rgba(48,99,142,1) 68%);
+    width: 100vw;
+    min-height: 50vh;
+    height: auto;
+    position: relative;
+}
+
+.wave svg {
+    width: 100%;
+    height: 100%;
+}
+
+.wave svg path {
+    fill: rgba(48,99,142,1);
+}
+
+.wave svg rect {
+    fill: #fff;
+}
+
+.wave {
+    --divider-height: 5rem;
+
+    position: relative;
+    top: calc( var(--divider-height)/2 * -1 );
+
+    height: var(--divider-height);
+    width: 100%;
+        /* alternatively, could get rid of the rect, and move the svg container further down */
+
+    float: left; 
+    z-index: 1;
+
+    /*   outline: 1px solid red; */
+}
+
+.top-nav {
+    background: transparent;
+    width: 80vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.logo {
+    font-family: solitreo;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.nav-links a {
+    margin: 0 15px;
+
+    &:hover {
+        color: pink;
+    }
+}
+
+.hero-inner {
+    width: 100vw;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 150px;
+}   
+
+.hero-content {
+    max-width: 50%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    h1 { 
+        font-size: 5rem;
+        font-family: solitreo;
+        color: #D1495B;
+    }
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+        color: #EDAE49;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+        transform: rotate(-30deg);
+    }
+
+    a {
+        background: #fff;
+        color: #000;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-family: solitreo;
+        text-decoration: none;
+        margin-top: 20px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background: #000;
+            color: #00798C;
+        }
+    }
+}
+
+.sub-desc {
+    color: #00798C;
+    font-family: solitreo;
+    font-size: 1.3rem;
+}
+
+// About us section
+.about-us {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.about-us-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+    margin: 50px auto;
+    margin-top: 50px;
+}
+
+.about-us-card {
+    width: 28%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#about-us-image-kylem {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/kylem.png);
+}
+
+#about-us-image-kyleh {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/kyleh.jpg);
+}
+
+#about-us-image-drewb {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/drewb.jpg);
+}
+
+.about-us-card-inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 1.2rem;
+        color: #D1495B;
+        font-family: solitreo;
+        padding: 10px 0;
+    }
+
+    p {
+        padding: 10px 0;
+    }
+}
+
+// Projects section
+.projects {
+    background-color: #EDAE49;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 100px;
+
+    h1 {
+        color: #003D5B;
+    }
+
+    p { 
+        color: #30638E;
+    }
+}
+
+.projects-content {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project-card {
+    min-width: 400px;
+    width: 30%;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        text-decoration: none;
+        background: linear-gradient(0deg, rgba(0,61,91,1) 0%, rgba(48,99,142,1) 68%);
+        opacity: 85%;
+        border-radius: 1rem;
+        // filter: brightness(0.85) saturate(1.5);
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
+        h2 {
+            color: #D1495B;
+            font-size: 1.5rem;
+            font-family: solitreo;
+            margin: 0;
+            padding: 0;
+            z-index: 3;
+            filter: brightness(1.5)
+        }
+
+        p {
+            color: #fff;
+            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+            z-index: 3;
+            text-align: left;
+        }
+    }
+}
+
+// Contact us section
+.contact-us {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 100px;
+    padding-bottom: 200px;
+    background-color: #30638E;
+
+    h1 {
+        color: #D1495B;
+    }
+
+    p { 
+        color: #EDAE49;
+    }
+
+    .contact-form {
+        width: 40%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+        padding: 20px;
+
+        input {
+            width: 100%;
+            height: 50px;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.5rem;
+            font-family: solitreo;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #D1495B;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            font-family: solitreo;
+            background-color: transparent;
+            // border: none;
+            border: 1px solid #D1495B;
+            border-radius: 1rem;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.5rem;
+            font-family: solitreo;
+            background-color: #D1495B;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #EDAE49;
+                color: #00798C;
+            }
+        }
+    }
+}
+
+// Footer section
+.footer {
+    width: 80vw;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -150px;
+    background-color: #00798C;
+    border-radius: 1rem 1rem 0 0;
+    color: #fff;
+
+    h1 {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .footer-content {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        // padding: 20px;
+
+        .footer-left {
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0 auto;
+            // padding: 20px;
+
+            h2 {
+                font-size: 1.5rem;
+                font-family: solitreo;
+                margin: 0;
+                padding: 0;
+                z-index: 3;
+                filter: brightness(1.5)
+            }
+
+            p {
+                color: #fff;
+                font-size: 1rem;
+                margin: 0;
+                padding: 0;
+                z-index: 3;
+                text-align: left;
+            }
+        }
+
+        .footer-right {
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: 0 auto;
+            // padding: 20px;
+
+            h2 {
+                color: #D1495B;
+                font-size: 1.5rem;
+                font-family: solitreo;
+                margin: 0;
+                padding: 0;
+                z-index: 3;
+                filter: brightness(1.5)
+            }
+
+            p {
+                color: #fff;
+                font-size: 1rem;
+                margin: 0;
+                padding: 0;
+                z-index: 3;
+                text-align: left;
+            }
+        }
+    }
+}

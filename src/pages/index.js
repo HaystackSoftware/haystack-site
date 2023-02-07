@@ -1,176 +1,182 @@
 import * as React from "react"
-
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+import hero_image from '../images/hero-image.png';
+import rarepack from '../images/rarepack.png';
+import exercise from '../images/exercise.jpg';
+import hikerfeed from '../images/hikerfeed.jpg';
+import hikerpack from '../images/hikerpack.jpg';
+import meep from '../images/meep.jpg';
+import '../styles/global.scss';
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+    <main>
+      <div className="hero">
+        <div className="top-nav">
+          <div className="logo">
+            <a href="#">Haystack Software</a>
+          </div>
+          <div className="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <div className="hero-inner">
+          <div className="hero-content">
+            <h1>Ready for Liftoff?</h1>
+            <p>Haystack Software is about our drive to build products that we want to see in the world. Whether it's from our own minds, 
+              or helping out someone with a great idea, we build architecturally sound sites and apps based on our own values and goals.</p>
+            <p className="sub-desc">Check out some of our products, or get in touch if you have an idea you would like to explore with us!</p>
+            <a href="#" className="btn">Get in Touch</a>
+          </div>
+          <div className="hero-content">
+            <img src={hero_image} alt="hero" />
+          </div>
+        </div>
+      </div>
+      <div class="wave">
+        <svg viewBox="0 70 500 60" preserveAspectRatio="none">
+          <rect x="0" y="0" width="500" height="500" style={{stroke: "none"}} />
+          <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style={{stroke: "none"}}></path>
+        </svg>
+      </div>
+
+      {/* about us */}
+      <div className="about-us" id="about">
+        <h1>Who we are...</h1>
+        <p>We are a passionate group of outdoor enthusiasts, developers and product managers with decades of experience between us, building all types of products in different industries and verticals.  
+          The drive to build products that we want to see in the world is what brought us together and made Haystack Software a reality.
+        </p>
+        <div className="about-us-content">
+
+          <div className="about-us-card">
+            <div id="about-us-image-kylem"></div>
+            <div className="about-us-card-inner">
+              <h2>Kyle McLeod - CEO</h2>
+              <p>
+              Kyle McLeod works as the CEO & Product Generalist for Haystack. He is an Entrepreneur, Community builder, and Product Strategy specialist with a passion for bringing beautiful new products into the world. With a background in business management, sales, product development and software engineering, he enjoys being involved in every aspect of developing a product and company. His passion for the startup space has led him to consult with many early to late stage companies and help bring some great products to life. He’s looking forward to the Haystack journey and creating lasting value for users all over the world.
+              </p>
+              <p className="sub-desc">"The only impossible journey is the one you never begin"</p>
+            </div>
+          </div>
+
+          <div className="about-us-card">
+            <div id="about-us-image-kyleh"></div>
+            <div className="about-us-card-inner">
+              <h2>Kyle Huber - COO</h2>
+              <p>
+              Kyle Huber is the COO at Haystack, overseeing business and product operations across the company. Kyle is an experienced leader with strong business acumen
+who encourages collaboration and drives continuous improvement. He specializes in developing scalable business processes to increase organizational effectiveness. Kyle is excited to accelerate growth at Haystack as the company launches new products to delight users.
+              </p>
+              <p className="sub-desc">"Progressive improvement beats delayed perfection."</p>
+            </div>
+          </div>
+
+          <div className="about-us-card">
+            <div id="about-us-image-drewb"></div>
+            <div className="about-us-card-inner">
+              <h2>Drew Bartlett - CTO</h2>
+              <p>
+              Drew Bartlett is the CTO at Haystack, overseeing all technical aspects of the company. Drew is an experienced leader with strong technical acumen...
+              </p>
+              <p className="sub-desc">"I really need to get my description and quote to Kyle so he can finish this website 😜"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Our projects */}
+      <div className="projects" id="projects">
+
+        <h1>Our Projects</h1>
+        <p>We build products we want to see in the world, and that people will love using. Check out some of what we've launched already and the ones that we're working on. Sign up below to get updates when new products are launched!</p>
+
+        <div className="projects-content">
+
+          <div className="project-card" style={{ backgroundImage: `url(${rarepack})` }}>
+            <a className="project-card-container">
+              <div className="project-content">
+                <h2>RarePack</h2>
+                <p>The next big thing in TCG card management. From creating your binders to managing collections, you can do it all with RarePack</p>
+              </div>
+            </a>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${hikerpack})` }}>
+            <a className="project-card-container">
+              <div className="project-content">
+                <h3>Coming Soon</h3>
+                <h2>HikerPack</h2>
+                <p>Going for a hike? 1 day, 2 days or a week? Make sure you have the right gear with our AI powered search engine and organizer</p>
+              </div>
+            </a>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${hikerfeed})` }}>
+            <a className="project-card-container">
+              <div className="project-content">
+                <h2>HikerFeed</h2>
+                <p>All in one solution to manage your through-hiking trip. Whether it's the PCT or the AT, or anything in between, HikerPack is right there every step of the way</p>
+              </div>
+            </a>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${exercise})` }}>
+            <a className="project-card-container">
+              <div className="project-content">
+                <h3>Coming Soon</h3>
+                <h2>WholeHealth</h2>
+                <p>Get your health all in one place. WholeHealth helps you manage everything from your training, physical therapy to chiropractic all from one app. You can even show your providers your whole health history so they know that you've been keeping up!</p>
+              </div>
+            </a>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${meep})` }}>
+            <a className="project-card-container">
+              <div className="project-content">
+                <h3>Coming Soon</h3>
+                <h2>Meep</h2>
+                <p>For the memories you want to keep! Meep is here to make sure that you can look back in 50 years and never forget that amazing trip you took, where you went, and what you did</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* contact us */}
+      <div className="contact-us" id="contact">
+
+        <h1>Get in touch</h1>
+        <p>Have a question? Want to work with us? We'd love to hear from you!</p>
+
+        <form className="contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <textarea name="message" placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      {/* footer */}
+      <div className="footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <h1>Haystack Software - 2023</h1>
+          </div>
+          <div className="footer-right">
+            <a href="#about">About Us</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Get in Touch</a>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Haystack Software</title>
