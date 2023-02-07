@@ -151,7 +151,7 @@ who encourages collaboration and drives continuous improvement. He specializes i
         <h1>Get in touch</h1>
         <p>Have a question? Want to work with us? We'd love to hear from you!</p>
 
-        <form className="contact-form" name="contact" method="POST" data-netlify="true">
+        <form className="contact-form" name="contact" method="POST" data-netlify="true" netlify>
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="name" placeholder="Name" />
           <input type="email" name="email" placeholder="Email" />
